@@ -30,6 +30,18 @@ public class Main {
 
         Board testboard = new Board(testPosition, 0);
 
+        Board nextBoard = new Board(testboard,1,2,20);
+
+        System.out.println(nextBoard);
+
+        ArrayList<Board> arr = Bishop.possibleMoves(testboard, 2);
+
+        System.out.println(arr.size());
+
+        for(int x = 0; x<arr.size();x++){
+            System.out.println(arr.get(x));
+        }
+        testboard.printBoard();
 
     }
 }

@@ -1,7 +1,7 @@
 import java.util.*;
 public class Pawn{
-    public static ArrayDeque<Board> possibleMoves(Board board, int startloc) {
-        ArrayDeque<Board> arr = new ArrayDeque<>();
+    public static ArrayList<Board> possibleMoves(Board board, int startloc) {
+        ArrayList<Board> arr = new ArrayList<>();
 
 
         int row = startloc/8;

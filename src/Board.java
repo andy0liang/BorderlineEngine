@@ -27,7 +27,7 @@ public class Board {
         int pieceToMove = squares[startloc];
         prevPiece = pieceToMove;
         currentPiece = squares[endloc];
-        squares[endloc] = pieceToMove;
+        this.squares[endloc] = pieceToMove;
         currentLoc = endloc;
 
         this.squares = squares;
@@ -38,11 +38,11 @@ public class Board {
 
         prevLoc = startloc;
         this.moveNumber = moveNumber;
-        squares = board.squares;
-        int pieceToMove = squares[startloc];
+        this.squares = board.getSquares().clone();
+        int pieceToMove = this.squares[startloc];
         prevPiece = pieceToMove;
-        currentPiece = squares[endloc];
-        squares[endloc] = pieceToMove;
+        currentPiece = this.squares[endloc];
+        this.squares[endloc] = pieceToMove;
         currentLoc = endloc;
     }
 
@@ -52,6 +52,17 @@ public class Board {
         return Piece.piece(prevPiece)+" "+columns[prevLoc%8]+(prevLoc/8)+" takes "+Piece.piece(currentPiece)+" "+columns[currentLoc%8]+(currentLoc/8);
 
     }
+    public void printBoard(){
+        for(int x = 0; x<64;x++){
+            if(x%8==0){
+                System.out.println();
+            }
+            System.out.print(squares[x]+"  ");
+        }
+    }
 
 
+    public int[] getSquares() {
+        return squares;
+    }
 }
