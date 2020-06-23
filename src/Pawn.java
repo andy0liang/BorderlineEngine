@@ -3,6 +3,7 @@ public class Pawn{
     public static ArrayDeque<Board> possibleMoves(Board board, int startloc) {
         ArrayDeque<Board> arr = new ArrayDeque<>();
 
+
         int row = startloc/8;
         int column = startloc%8;
         if(board.squares[startloc]>0) {//white

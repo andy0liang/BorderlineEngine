@@ -17,6 +17,6 @@ public class Main {
 
 
         Board startingPosition = new Board(startingSquares,0);
-        ArrayDeque<Board> arr = Bishop.possibleMoves()
+        
     }
 }
