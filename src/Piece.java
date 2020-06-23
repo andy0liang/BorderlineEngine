@@ -8,7 +8,7 @@ public class Piece {
             return "white "+arr[n];
         }
         else if(n<0){
-            return "black "+arr[n];
+            return "black "+arr[n*-1];
         }
         else{
             return "empty piece";

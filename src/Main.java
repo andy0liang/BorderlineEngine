@@ -16,7 +16,7 @@ public class Main {
                                             -4,-3,-2,-5,-6,-2,-3,-4};
 
         int[] testPosition = new int[]{     0,0,2,0,0,2,0,0,
-                                            1,0,1,0,0,1,0,1,
+                                            -1,0,1,0,0,1,0,1,
                                             0,0,0,0,0,0,0,0,
                                             0,0,0,0,0,0,0,0,
                                             0,0,0,2,0,0,0,0,
@@ -30,20 +30,12 @@ public class Main {
 
         Board testboard = new Board(testPosition, 0);
 
-        Board nextBoard = new Board(testboard,1,2,20);
+        Board nextBoard = new Board(testboard,1,10,26);
 
-        System.out.println(nextBoard);
 
-        ArrayList<Board> arr = Bishop.possibleMoves(testboard, 35);
+       print(Pawn.possibleMoves(nextBoard,26));
 
-        System.out.println(arr.size());
-
-        print(arr);
-        testboard.printBoard();
-
-        nextBoard.printBoard();
-
-        print(Bishop.possibleMoves(nextBoard, 35));
+       nextBoard.printBoard();
 
     }
 

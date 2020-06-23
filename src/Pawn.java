@@ -11,7 +11,7 @@ public class Pawn{
             if(startloc+8<64 && board.squares[startloc+8]==0){
                 arr.add(new Board(board, 1, startloc, startloc+8));
             }
-            if(startloc+16<64 && board.squares[startloc+16]==0){
+            if((row==1 || row==6) && startloc+16<64 && board.squares[startloc+16]==0){
                 arr.add(new Board(board, 1, startloc, startloc+16));
             }
             if(column!=0 && startloc+7<64 && board.squares[startloc+7]<0){
@@ -27,7 +27,7 @@ public class Pawn{
             if(startloc-8>=0 && board.squares[startloc-8]==0){
                 arr.add(new Board(board, 1, startloc, startloc-8));
             }
-            if(startloc-16>=0 && board.squares[startloc-16]==0){
+            if((row==1 || row==6) && startloc-16>=0 && board.squares[startloc-16]==0){
                 arr.add(new Board(board, 1, startloc, startloc-16));
             }
             if(column!=7 && startloc-7<64 && board.squares[startloc-7]<0){
