@@ -15,8 +15,20 @@ public class Main {
                                             -1,-1,-1,-1,-1,-1,-1,-1,
                                             -4,-3,-2,-5,-6,-2,-3,-4};
 
+        int[] testPosition = new int[]{     0,0,2,0,0,2,0,0,
+                                            1,0,1,0,0,1,0,1,
+                                            0,0,0,0,0,0,0,0,
+                                            0,0,0,0,0,0,0,0,
+                                            0,0,0,0,0,0,0,0,
+                                            0,0,0,0,0,0,0,0,
+                                            0,0,0,0,0,0,0,0,
+                                            0,0,0,0,0,0,0,0
+
+        };
 
         Board startingPosition = new Board(startingSquares,0);
-        
+
+        Board testboard = new Board(testPosition, 0);
+
     }
 }
