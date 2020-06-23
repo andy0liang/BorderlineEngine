@@ -26,11 +26,14 @@ public class Board {
         prevLoc = startloc;
         int pieceToMove = squares[startloc];
         prevPiece = pieceToMove;
+
         currentPiece = squares[endloc];
-        this.squares[endloc] = pieceToMove;
+
         currentLoc = endloc;
 
         this.squares = squares;
+        this.squares[endloc] = pieceToMove;
+        this.squares[startloc] = 0;
 
     }
 
@@ -44,6 +47,7 @@ public class Board {
         currentPiece = this.squares[endloc];
         this.squares[endloc] = pieceToMove;
         currentLoc = endloc;
+        this.squares[startloc] = 0;
     }
 
     @Override
@@ -59,6 +63,7 @@ public class Board {
             }
             System.out.print(squares[x]+"  ");
         }
+        System.out.println();
     }
 
 

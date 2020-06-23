@@ -19,7 +19,7 @@ public class Main {
                                             1,0,1,0,0,1,0,1,
                                             0,0,0,0,0,0,0,0,
                                             0,0,0,0,0,0,0,0,
-                                            0,0,0,0,0,0,0,0,
+                                            0,0,0,2,0,0,0,0,
                                             0,0,0,0,0,0,0,0,
                                             0,0,0,0,0,0,0,0,
                                             0,0,0,0,0,0,0,0
@@ -34,14 +34,24 @@ public class Main {
 
         System.out.println(nextBoard);
 
-        ArrayList<Board> arr = Bishop.possibleMoves(testboard, 2);
+        ArrayList<Board> arr = Bishop.possibleMoves(testboard, 35);
 
         System.out.println(arr.size());
 
-        for(int x = 0; x<arr.size();x++){
+        print(arr);
+        testboard.printBoard();
+
+        nextBoard.printBoard();
+
+        print(Bishop.possibleMoves(nextBoard, 35));
+
+    }
+
+    public static void print(ArrayList <Board> arr){
+
+        for(int x =0; x<arr.size();x++){
             System.out.println(arr.get(x));
         }
-        testboard.printBoard();
 
     }
 }
