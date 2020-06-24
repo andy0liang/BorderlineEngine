@@ -41,4 +41,35 @@ public class Pawn{
 
         return arr;
     }
+
+    public static ArrayList<Integer> defendList(Board board, int startloc){
+        ArrayList<Integer> arr = new ArrayList<>();
+        int row = startloc/8;
+        int column = startloc%8;
+        if(board.squares[startloc]>0) {//white
+
+
+
+            if(column!=0 && startloc+7<64 && board.squares[startloc+7]<0){
+                arr.add(startloc+7);
+            }
+            if(column!=7 && startloc+9<64 && board.squares[startloc+9]<0){
+                arr.add(startloc+9);
+            }
+
+        }
+        else{
+
+
+            if(column!=7 && startloc-7<64 && board.squares[startloc-7]<0){
+                arr.add(startloc-7);
+            }
+            if(column!=0 && startloc-9<64 && board.squares[startloc-9]<0){
+                arr.add(startloc-7);
+            }
+
+        }
+        return arr;
+    }
+
 }

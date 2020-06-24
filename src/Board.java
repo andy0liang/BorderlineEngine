@@ -8,6 +8,7 @@ public class Board {
     int prevPiece;
     int currentLoc;
     int currentPiece;
+    int isCheck = -1;
     String[] columns = new String[]{"a","b","c","d","e","f","g","h"};
 
     //1: pawn, 2: bishop, 3: knight, 4: rook, 5: queen, 6: king
@@ -70,4 +71,29 @@ public class Board {
     public int[] getSquares() {
         return squares;
     }
+
+    public boolean isCheck(){
+        if(this.isCheck>-1){
+            return this.isCheck==1;
+        }
+
+        int whiteKingLoc = indexOf(squares, 6);
+        int blackKingLoc = indexOf(squares, -6);
+
+
+        this.isCheck = 0;
+        return false;
+    }
+
+    public static int indexOf(int[] arr, int value){
+        int index = -1;
+        for(int x = 0; x<arr.length;x++){
+            if(arr[x]==value){
+                index = x;
+                break;
+            }
+        }
+        return index;
+    }
+
 }
