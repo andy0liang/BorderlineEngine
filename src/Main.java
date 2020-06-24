@@ -18,7 +18,7 @@ public class Main {
         int[] testPosition = new int[]{     0,0,2,0,0,2,0,0,
                                             1,0,1,0,0,1,0,1,
                                             0,0,0,0,0,0,0,0,
-                                            0,0,0,0,3,0,0,0,
+                                            0,0,0,0,4,0,0,0,
                                             0,0,0,2,0,0,0,0,
                                             0,0,0,0,0,0,0,0,
                                             0,0,0,0,0,0,0,0,
@@ -30,10 +30,10 @@ public class Main {
 
         Board testboard = new Board(testPosition, 0);
 
-        Board nextBoard = new Board(testboard,1,28,38);
+        Board nextBoard = new Board(testboard,1,28,36);
 
 
-       print(Knight.possibleMoves(nextBoard,38));
+       print(Rook.possibleMoves(nextBoard,36));
 
        nextBoard.printBoard();
 
