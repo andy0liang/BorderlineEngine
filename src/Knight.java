@@ -7,19 +7,35 @@ public class Knight{
         if(board.squares[startloc]>0){ //white
 
             if(row<6){
-                if(column!=7){
+                if(column!=7 && board.squares[startloc+17]<1){
                     arr.add(new Board(board, 1, startloc, startloc+17));
                 }
-                if(column!=0){
+                if(column!=0 && board.squares[startloc+15]<1){
                     arr.add(new Board(board, 1, startloc, startloc+15));
                 }
             }
             if(row>1){
-                if(column!=7){
+                if(column!=7 && board.squares[startloc-15]<1){
                     arr.add(new Board(board, 1, startloc, startloc-15));
                 }
-                if(column!=0){
+                if(column!=0 && board.squares[startloc-17]<1){
                     arr.add(new Board(board, 1, startloc, startloc-17));
+                }
+            }
+            if(column<6){
+                if(row!=7 && board.squares[startloc+10]<1){
+                    arr.add(new Board(board, 1, startloc, startloc+10));
+                }
+                if(row!=0 && board.squares[startloc-6]<1){
+                    arr.add(new Board(board, 1, startloc, startloc-6));
+                }
+            }
+            if(column>1){
+                if(row!=7 && board.squares[startloc+6]<1){
+                    arr.add(new Board(board, 1, startloc, startloc+6));
+                }
+                if(row!=0 && board.squares[startloc-10]<1){
+                    arr.add(new Board(board, 1, startloc, startloc-10));
                 }
             }
 
